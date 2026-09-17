@@ -1,6 +1,6 @@
 # Hello World Spring Boot API
 
-A minimal REST API that responds with `Hello World`.
+A minimal REST API that responds with `Hello World `.
 
 ## Run
 

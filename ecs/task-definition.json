@@ -31,7 +31,7 @@
         }
       },
       "healthCheck": {
-        "command": ["CMD-SHELL", "java -version >/dev/null 2>&1"],
+        "command": ["CMD-SHELL", "curl --fail --silent http://localhost:8080/actuator/health/readiness || exit 1"],
         "interval": 30,
         "timeout": 5,
         "retries": 3,
