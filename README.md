@@ -51,3 +51,28 @@ curl http://localhost:8080/actuator/health
 
 Floci is useful to emulate AWS services in local development and CI. It is not
 a production hosting service, so this application does not deploy *to* Floci.
+
+## Learn S3 locally
+
+The project includes a complete Floci-backed S3 example with bucket and object
+CRUD endpoints. Follow [S3_LEARNING_GUIDE.md](S3_LEARNING_GUIDE.md) for setup,
+AWS CLI commands, curl examples, configuration, and troubleshooting.
+
+SQS practice is isolated in the `com.example.helloworld.sqs` package. Follow
+[SQS_LEARNING_GUIDE.md](SQS_LEARNING_GUIDE.md) for queue, producer, consumer,
+delete, AWS CLI, and troubleshooting steps.
+
+SNS practice is isolated in the `com.example.helloworld.sns` package. Follow
+[SNS_LEARNING_GUIDE.md](SNS_LEARNING_GUIDE.md) for topics, publishing,
+subscriptions, AWS CLI, and SNS-to-SQS concepts.
+
+Secrets Manager and Parameter Store practice is isolated in the
+`com.example.helloworld.secretsmanager` and
+`com.example.helloworld.parameterstore` packages. Follow
+[SECRETS_AND_PARAMETERS_GUIDE.md](SECRETS_AND_PARAMETERS_GUIDE.md) for local
+Floci commands, REST APIs, AWS CLI, and service differences.
+
+CloudWatch metrics and Kinesis stream practice are isolated in the
+`com.example.helloworld.cloudwatch` and `com.example.helloworld.kinesis`
+packages. Follow [CLOUDWATCH_KINESIS_LEARNING_GUIDE.md](CLOUDWATCH_KINESIS_LEARNING_GUIDE.md)
+for local REST and AWS CLI examples.

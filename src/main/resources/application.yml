@@ -15,3 +15,52 @@ management:
 info:
   app:
     name: Hello World API
+
+app:
+  s3:
+    bucket: ${S3_BUCKET:learning-bucket}
+    region: ${AWS_DEFAULT_REGION:us-east-1}
+    endpoint: ${AWS_ENDPOINT_URL:}
+    access-key: ${AWS_ACCESS_KEY_ID:test}
+    secret-key: ${AWS_SECRET_ACCESS_KEY:test}
+    auto-create-bucket: ${S3_AUTO_CREATE_BUCKET:true}
+
+  sqs:
+    queue-name: ${SQS_QUEUE_NAME:learning-queue}
+    region: ${AWS_DEFAULT_REGION:us-east-1}
+    endpoint: ${AWS_ENDPOINT_URL:}
+    access-key: ${AWS_ACCESS_KEY_ID:test}
+    secret-key: ${AWS_SECRET_ACCESS_KEY:test}
+
+  cloudwatch:
+    namespace: ${CLOUDWATCH_NAMESPACE:LearningApp}
+    region: ${AWS_DEFAULT_REGION:us-east-1}
+    endpoint: ${AWS_ENDPOINT_URL:}
+    access-key: ${AWS_ACCESS_KEY_ID:test}
+    secret-key: ${AWS_SECRET_ACCESS_KEY:test}
+
+  kinesis:
+    stream-name: ${KINESIS_STREAM_NAME:learning-stream}
+    region: ${AWS_DEFAULT_REGION:us-east-1}
+    endpoint: ${AWS_ENDPOINT_URL:}
+    access-key: ${AWS_ACCESS_KEY_ID:test}
+    secret-key: ${AWS_SECRET_ACCESS_KEY:test}
+
+  sns:
+    topic-name: ${SNS_TOPIC_NAME:learning-topic}
+    region: ${AWS_DEFAULT_REGION:us-east-1}
+    endpoint: ${AWS_ENDPOINT_URL:}
+    access-key: ${AWS_ACCESS_KEY_ID:test}
+    secret-key: ${AWS_SECRET_ACCESS_KEY:test}
+
+  secrets-manager:
+    region: ${AWS_DEFAULT_REGION:us-east-1}
+    endpoint: ${AWS_ENDPOINT_URL:}
+    access-key: ${AWS_ACCESS_KEY_ID:test}
+    secret-key: ${AWS_SECRET_ACCESS_KEY:test}
+
+  parameter-store:
+    region: ${AWS_DEFAULT_REGION:us-east-1}
+    endpoint: ${AWS_ENDPOINT_URL:}
+    access-key: ${AWS_ACCESS_KEY_ID:test}
+    secret-key: ${AWS_SECRET_ACCESS_KEY:test}

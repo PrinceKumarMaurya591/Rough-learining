@@ -1,9 +1,35 @@
+name: hello-world-local
+
 services:
+  floci:
+    image: floci/floci:latest
+    ports:
+      - "4566:4566"
+    environment:
+      # Lets ECS tasks launched by Floci join this Compose network.
+      FLOCI_SERVICES_ECS_DOCKER_NETWORK: hello-world-local_default
+      # Docker-compatible ECR image URIs for local learning.
+      FLOCI_SERVICES_ECR_URI_STYLE: path
+    volumes:
+      # Required because Floci launches ECS tasks as Docker containers.
+      - /var/run/docker.sock:/var/run/docker.sock
+      - floci-data:/app/data
+
   hello-world:
     build:
       context: .
     image: hello-world:local
     environment:
       SPRING_PROFILES_ACTIVE: prod
+      AWS_ENDPOINT_URL: http://floci:4566
+      AWS_DEFAULT_REGION: us-east-1
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
     ports:
-      - "8080:8080"
+      - "8082:8080"
+    depends_on:
+      floci:
+        condition: service_healthy
+
+volumes:
+  floci-data:

@@ -1,2 +1,7 @@
+/media/prince-kumar-maurya/Work_Data/Rough learining/src/main/java/com/example/helloworld/DynamoDbConfig.java
+/media/prince-kumar-maurya/Work_Data/Rough learining/src/main/java/com/example/helloworld/DynamoDbService.java
 /media/prince-kumar-maurya/Work_Data/Rough learining/src/main/java/com/example/helloworld/HelloController.java
 /media/prince-kumar-maurya/Work_Data/Rough learining/src/main/java/com/example/helloworld/HelloWorldApplication.java
+/media/prince-kumar-maurya/Work_Data/Rough learining/src/main/java/com/example/helloworld/S3Config.java
+/media/prince-kumar-maurya/Work_Data/Rough learining/src/main/java/com/example/helloworld/S3Controller.java
+/media/prince-kumar-maurya/Work_Data/Rough learining/src/main/java/com/example/helloworld/S3StorageService.java
